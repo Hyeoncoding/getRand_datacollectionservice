@@ -64,7 +64,7 @@ public class TrendServiceImpl implements TrendService {
             JsonNode trendingSearchesNode = rootNode.path("trending_searches");
             List<RealTimeTrendEntity> trendingSearches = new ArrayList<>();
             if (trendingSearchesNode != null) {
-                int limit = Math.min(trendingSearchesNode.size(), 10);
+                int limit = Math.min(trendingSearchesNode.size(), 20);
                 int count = 0;
                 for (JsonNode node : trendingSearchesNode) {
                     RealTimeTrendEntity entity = new RealTimeTrendEntity();
